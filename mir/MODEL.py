@@ -8,7 +8,7 @@ import scipy.io as sio
 from tqdm import tqdm
 from numpy import *
 
-class SSAH(object):
+class MODEL(object):
     def __init__(self, sess):
 
         self.train_L = train_L
@@ -576,7 +576,7 @@ class SSAH(object):
 
 
     def save(self, checkpoint_dir, step):
-        model_name = "SSAH"
+        model_name = "adversial_AE_hashing"
         model_dir = "%s_%s" % (self.dataset_dir, self.bit)
         checkpoint_dir = os.path.join(checkpoint_dir, model_dir)
 
